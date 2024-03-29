@@ -4,7 +4,7 @@ title: About me
 permalink: /about
 ---
 
-![alt text]({{ site.baseurl }}/assets/img/logo.png){:.profile}
+<!-- ![alt text]({{ site.baseurl }}/assets/img/logo.png){:.profile} -->
 
 # Summary
 
