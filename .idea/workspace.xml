@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d138ca41-f141-40c2-9846-205049e5ea16" name="Changes" comment="" />
+    <list default="true" id="edbd8099-68f7-4359-b463-cef58ac41ce1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,9 +14,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
+  "associatedIndex": 8
 }]]></component>
-  <component name="ProjectId" id="2eMwdMU2umWdW1eXZrZnV46h1Km" />
+  <component name="ProjectId" id="2eNcNsRLdBln1wumLeqdRHKcJfT" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -25,7 +25,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/Projects/personal_website",
+    "last_opened_file_path": "D:/Projects/gh_pages",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -34,6 +34,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\gh_pages" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -44,12 +49,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d138ca41-f141-40c2-9846-205049e5ea16" name="Changes" comment="" />
-      <created>1711727840231</created>
+      <changelist id="edbd8099-68f7-4359-b463-cef58ac41ce1" name="Changes" comment="" />
+      <created>1711748440058</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1711727840231</updated>
-      <workItem from="1711727841294" duration="12515000" />
+      <updated>1711748440058</updated>
+      <workItem from="1711748441332" duration="4256000" />
     </task>
     <servers />
   </component>

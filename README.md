@@ -1,201 +1,209 @@
-## Installation
+#### Personal Blog Website
 
-If you're just getting started with Jekyll, you can use this repository as a starting point for your own site. Just download this project and add all the files to your project. Add your blog posts to the `posts/` directory, and create your pages with the proper Jekyll front matter (see `posts.html` for an example).
+### Directory Structure
 
-If your site already uses Jekyll, follow these steps:
+If you are familiar with Jekyll, then this directory structure shouldn't be too difficult to navigate. 
+The following some highlights of the differences you might notice between the default directory structure. 
+More information on what these folders and files do can be found in the [Jekyll documentation site](https://jekyllrb.com/docs/structure/).
 
-1. Replace the files in the `_includes`, `_layouts`, and `_sass` directories with those from this project.
-2. Replace your `index.html` with the one from this project, and copy over the `posts.html` file as well.
-3. Copy the contents of the `_config.yml` from this project in to yours, and update the necessary information.
-
-Don't forget to install Jekyll and other dependencies:
 ```bash
-# cd into project directory
-cd personal_website
-# install Bundler if you don't have it already
-gem install bundler
-# install jekyll, jekyll-archives, jekyll-sitemap, and jekyll-paginate
-bundle install
+Millennial/
+├── _data                      # Data files
+|  └── settings.yml            # Theme settings and custom text
+├── _includes                  # Theme includes
+├── _layouts                   # Theme layouts (see below for details)
+├── _posts                     # Where all your posts will go
+├── assets                     # Style sheets and images are found here
+|  ├── css                     # Style sheets go here
+|  |  └── _sass                # Folder containing SCSS files
+|  |  └── main.scss            # Main SCSS file
+|  |  └── syntax.css           # Style sheet for code syntax highlighting
+|  └── img                     # Images go here
+├── pages                      # Category pages
+├── _config.yml                # Site build settings
+├── Gemfile                    # Ruby Gemfile for managing Jekyll plugins
+├── index.md                   # Home page
+├── LICENSE.md                 # License for this theme
+├── README.md                  # Includes all of the documentation for this theme
+└── rss-feed.xml               # Generates RSS 2.0 file which Jekyll points to
 ```
 
+### Starting From Scratch
 
-## Updating Header and Footer Links
-
-Links in the header and footer are auto-generated. Links will be made for all files marked `category: page`, that have a title, and have the custom `main_nav` front-matter variable set to `true`. You can modify the rules for link generation in `_layouts/nav_links.html`.
-
-## Updating Styles
-
-If you want change the CSS of the theme, you'll probably want to check out these files in the `_sass/` directory:
-
-* `base/_variables.scss`: Common values found throughout the project, including base font size, font families, colors, and more.
-* `base/_typography.scss`: Base typography values for the site (see `typography.html` for a demonstration)
-* `_layout.scss`: The primary styles for the layout and design of the theme.
-
-### Important Variables
-
-Here are the important variables from `base/_variables.scss` you can tweak to customize the theme to your liking:
-
-* `$base-font-family`: The font-family of the body text. Make sure to `@import` any new fonts!
-* `$heading-font-family`: The font-family of the headers. Make sure to `@import` any new fonts!
-* `$base-font-size`: The base font-size. Defaults to $em-base from Bourbon (`bourbon/settings/_px-to-em.scss`).
-* `$base-font-color`: The color for the body text.
-* `$action-color`: The color for links in the body text.
-* `$highlight-color`: The color for the footer and page headers (when no cover image provided).
+To completely start from scratch, simply delete all the files in the `_posts`, `assets/img`, and `pages` folder, 
+and add your own content. 
+You may also replace the `README.md` file with your own README. Everything in the `_data` folder and `_config.yml` 
+file can be edited to suit your needs.
+You may also change the `favicon.ico` file to your own favicon.
 
 ## Configuration
 
-All configuration options can be found in `_config.yml`.
+### Sample Posts
+ 
+You can find these posts in the `_posts` folder, which show what the best practices for setting up your own site are.
 
-### Site Settings
+### Site Variables
 
-* __title:__ The title for your site. Displayed in the navigation menu, the `index.html` header, and the footer.
-* __subtitle:__ The subtitle of your site. Displayed in the `index.html` header.
-* __email:__ Your email address, displayed with the Contact info in the footer.
-* __name:__ Your name. _Currently unused._
-* __description:__ The description of your site. Used for search engine results and displayed in the footer.
-* __baseurl:__ The subpath of your site (e.g. /blog/).
-* __url:__ The base hostname and protocol for your site.
-* __cover:__ The relative path to your site's cover image.
-* __logo:__ The relative path to your site's logo. Used in the navigation menu instead of the title if provided.
+To change site build settings, edit the `_config.yml` file found in the root of your repository, which you can tweak 
+however you like. More information on configuration settings and plugins can be found on [the Jekyll documentation site](https://jekyllrb.com/docs/configuration/). 
+This is also where you will be able to customize the title, description, and the author/owner of your site.
 
-### Build Settings
+If you are hosting your site on GitHub Pages, then committing a change to the `_config.yml` file will force a rebuild 
+of your site with Jekyll. Any changes made should be viewable soon after. 
+If you are hosting your site locally, then you must run `jekyll serve` again for the changes to take place.
 
-* __markdown:__ Markdown parsing engine. Default is kramdown.
-* __inter_post_navigation:__ Whether to render links to the next and previous post on each post.
+In the `settings.yml` file found in the `_data` folder, you will be able to customize your site settings, 
+such as setting Disqus comments, Google Analytics, what shows up in your menu, and social media information.
 
-### Pagination settings
+### Adding Menu Pages
 
-See the documentation for [jekyll-paginate-v2](https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#site-configuration) for more details.
+The menu pages are found in the `menu` folder in the root directory, and can be added to your menu in the `settings.yml` file.
 
-### Archive Settings
+### Posts
 
-Although this theme comes with a combined, categorized archive (see `posts.html`), you can enable further archive creation thanks to [jekyll-archives][archives]. Support for category and tag archive pages is included, but you can also add your own archive pages for years, months, and days.
+You will find example posts in your `_posts` directory. Go ahead and edit any post and re-build the site to see your changes. 
+You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, 
+which launches a web server and auto-regenerates your site when a file is updated.
 
-To change archive settings, see the __jekyll-archives__ section of `_config.yml`:
+To add new posts, simply add a file in the `_posts` directory that follows the convention of `YYYY-MM-DD-name-of-post.md` 
+and includes the necessary front matter. Take a look at any sample post to get an idea about how it works. 
+If you already have a website built with Jekyll, simply copy over your posts to migrate to this one.
 
-```yml
-jekyll-archives:
-  enabled:
-    - categories
-    - tags
-  layout: 'archive'
-  permalinks:
-    category: '/category/:name/'
-    tag: '/tag/:name/'
-```
+### Layouts
 
-To fully disable the archive, remove the __jekyll-archives__ section AND remove it from the __gems__ list.
-
-__NOTE:__ the Jekyll Archive gem is NOT included with GitHub pages! Disable the archive feature if you intend to deploy your site to GitHub pages. [Here is a guide](http://ixti.net/software/2013/01/28/using-jekyll-plugins-on-github-pages.html) on how you can use the `jekyll archive` gem with GitHub pages. The general gist: compile the Jekyll site locally and then push that compiled site to GitHub.
-
-A sitemap is also generated using [jekyll-sitemap][sitemap].
-
-### Syntax Highlighting Settings
-
-Inside of a post, you can enable syntax highlighting with the `{% highlight <language> %}` Liquid tag. For example:
+There are two main layout options that are included with Millennial: post and page. 
+Layouts are specified through the [YAML front block matter](https://jekyllrb.com/docs/frontmatter/). 
+Any file that contains a YAML front block matter will be processed by Jekyll. For example:
 
 ```
-{% highlight javascript %}
-function demo(string, times) {
-  for (var i = 0; i < times; i++) {
-    console.log(string);
-  }
-}
-demo("hello, world!", 10);
-{% endhighlight %}
-```
-
-You can change the [HighlightJS theme][highlightjs_theme] in `_config.yml`:
-
-```yml
-highlightjs_theme: "monokai_sublime"
-```
-
-### Disqus Settings
-
-You can enable [Disqus][disqus] comments for you site by including one config option:
-
-* __disqus_shortname:__ Your Disqus username. If the property is set, Disqus comments will be included with your blog posts.
-
-If you want to disable Disqus for only a specific page, add __disqus_disabled: true__ to the page's front matter.
-
-### Google Analytics Settings
-
-You can enable basic [Google Analytics][ga] pageview tracking by including your site's tracking ID:
-
-* __ga_tracking_id__: The Tracking ID for your website. You can find it on your Google Analytics dashboard. If the property is set, Google Analytics will be added to the footer of each page.
-
-### Social Settings
-
-Your personal social network settings are combined with the social sharing options. In the __social__ section of `_config.yml`, include an entry for each network you want to include. For example:
-
-```yml
-social:
-  - name: Twitter                         # Name of the service
-    icon: twitter                         # Font Awesome icon to use (minus fa- prefix)
-    username: dimitarboeff                # (User) Name to display in the footer link
-    url: https://twitter.com/dimitarboeff # URL of your profile (leave blank to not display in footer)
-    desc: Follow me on Twitter            # Description to display as link title, etc
-    share: true                           # Include in the "Share" section of posts
-```
-
-### Social Protocols
-
-Using the Open Graph Protocol or Twitter Card metadata, you can automatically set the images and text used when people share your site on Twitter or Facebook. These take a bit of setup, but are well worth it. The relevant fields are at the end of the `_config.yml` file.
-
-Also there is another protocol, the Open Source protocol, for saying where your site is hosted if the source is open. This helps develops more easily see your code if they are interested, or if they have issues. For more, see http://osprotocol.com.
-
-### Category Descriptions
-
-You can enhance the `posts.html` archive page with descriptions of your post categories. See the __descriptions__ section of `_config.yml`:
-
-```yml
-# Category descriptions (for archive pages)
-descriptions:
-  - cat: jekyll
-    desc: "Posts describing Jekyll setup techniques."
-```
-
-### Custom Page-Specific Javascript
-
-You can add page-specific javascript files by adding them to the top-level `/js` directory and including the filename in the __custom_js__ page's configuration file:
-
-```yml
-# Custom js (for individual pages)
 ---
 layout: post
-title:  "Dummy Post"
-date:   2015-04-18 08:43:59
-author: DBoeff
-categories: Dummy
-custom_js:
-- Popmotion
-- Vue
+title: "Example Post"
 ---
 ```
 
-The `/js/` directory would contain the corresponding files:
+Examples of what posts looks like can be found in the `_posts` directory, which includes this post you are reading right now. 
+Posts are the basic blog post layout, which includes a header image, post content, author name, date published, 
+social media sharing links, and related posts.
 
-```bash
-$ ls js/
-Popmotion.js Vue.js
+Pages are essentially the post layout without any of the extra features of the posts layout.
+
+In addition to the two main layout options above, there are also custom layouts that have been created for 
+the home page and the contacts. These are simply just page layouts with 
+some [Liquid template code](https://shopify.github.io/liquid/). 
+Check out the `index.html` file in the root directory for what the code looks like.
+
+### YAML Front Block Matter
+
+The recommended YAML front block is:
+
 ```
+---
+layout:
+title:
+author:
+categories:
+tags: []
+image:
+---
+```
+
+`layout` specifies which layout to use, `title` is the page or post title, `categories` can be used to better organize 
+your posts, `tags` are used when generating related posts based on the topic of the post, and `image` specifies which 
+images to use. Have a look at some posts in the `_posts` directory to see how these variables are set.
+
+## Features
+
+### Design Considerations
+
+Millennial was designed to be a minimalist theme in order for the focus to remain on your content. For example, links 
+are signified mainly through an underline text-decoration, in order to maximize the perceived affordance of 
+clickability (I originally just wanted to make the links a darker shade of grey).
+
+### Disqus
+
+Millennial supports comments at the end of posts through [Disqus](https://disqus.com/). In order to activate Disqus commenting, 
+set `disqus.comments` to true in the `_data/settings.yml` file. If you do not have a Disqus account already, 
+you will have to set one up, and create a profile for your website. You will be given a `disqus_shortname` that 
+will be used to generate the appropriate comments sections for your site. More information on [how to set up Disqus](http://www.perfectlyrandom.org/2014/06/29/adding-disqus-to-your-jekyll-powered-github-pages/).
+
+### Google Analytics
+
+It is possible to track your site statistics through [Google Analytics](https://www.google.com/analytics/). Similar to Disqus, you will have to 
+create an account for Google Analytics, and enter the correct Google ID for your site under `google-ID` in 
+the `settings.yml` file. More information on [how to set up Google Analytics](https://michaelsoolee.com/google-analytics-jekyll/). Note: If you are not using 
+Google Analytics, please change `google-ID` to an empty string.
+
+### RSS Feeds
+
+Atom is supported by default through [jekyll-feed](https://github.com/jekyll/jekyll-feed). With jekyll-feed, you can set configuration variables such 
+as 'title', 'description', and 'author', in the `_config.yml` file.
+
+RSS 2.0 is also supported through [RSS auto-discovery](http://www.rssboard.org/rss-autodiscovery). The `rss-feed.xml` file (based on the template found 
+at [jekyll-rss-feeds](https://github.com/snaptortoise/jekyll-rss-feeds)) that the feed path points to when using RSS 2.0 is automatically generated based on 
+the appropriate configuration variables found in `_data/settings.yml`.
+
+To use RSS 2.0, ensure the following is done:
+
+* Uncomment the last two lines in the `_config.yml` file.
+
+* In `_data/settings.yml`, under 'social', comment out the rss-square that points to `feed.xml`, and uncomment the 
+* rss-square that points to `rss-feed.xml`.
+
+* In `_includes/head.html`, comment out `{% feed_meta %}` and uncomment the line under the RSS 2.0 comment.
+
+### Social Media Icons
+
+All social media icons are courtesy of [Font Awesome](http://fontawesome.io/). You can change which icons appear, as well as the account 
+that they link to, in the `settings.yml` file in the `_data` folder.
+
+### MathJax
+
+Millennial comes out of the box with [MathJax](https://www.mathjax.org/), which allows you to display mathematical equations in your posts 
+through the use of [LaTeX](http://www.andy-roberts.net/writing/latex/mathematics_1).
+
+### Syntax Highlighting
+
+Millennial provides syntax highlighting through [fenced code blocks](https://help.github.com/articles/creating-and-highlighting-code-blocks/). Syntax highlighting allows you to display 
+source code in different colors and fonts depending on what programming language is being displayed. 
+You can find the full list of supported programming languages [here](https://github.com/jneen/rouge/wiki/List-of-supported-languages-and-lexers). Another option is to embed your code 
+through [Gist](https://en.support.wordpress.com/gist/).
+
+### Markdown
+
+As always, Jekyll offers support for GitHub Flavored Markdown, which allows you to format your posts using 
+the [Markdown syntax](https://guides.github.com/features/mastering-markdown/). Examples of these text formatting features can be seen below. You can find this post in 
+the `_posts` directory as well as the `README.md` file.
+
+## Everything Else
+
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature 
+requests at [Jekyll's GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+
+[jekyll-docs]: http://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
+
+## Contributing
+
+This site has been designed as a base for users to customize and fit to their own unique needs. 
+Please keep this in mind when requesting features and/or submitting pull requests. Some examples of 
+changes that I would love to see are things that would make the site easier to use, or better ways of 
+doing things. Please avoid changes that do not benefit the majority of users.
+
+## Questions?
+
+This theme is completely free and open source software. You may use it however you want, as it is distributed 
+under the [MIT License](http://choosealicense.com/licenses/mit/). 
+
+
+### Icons + Demo Images
+
+* [Death to Stock](https://deathtothestockphoto.com/)
+
+* [Font Awesome](http://fontawesome.io/)
 
 
 ## License
 
-MIT. See [LICENSE.MD](https://github.com/dimitarboeff/dboeff.github.io/blob/master/LICENSE.md)
-
-[bourbon]: http://bourbon.io/
-[neat]: http://neat.bourbon.io/
-[bitters]: http://bitters.bourbon.io/
-[refills]: http://refills.bourbon.io/
-[fontawesome]: http://fortawesome.github.io/Font-Awesome/
-[highlightjs]: https://highlightjs.org/
-[highlightjs_theme]: https://highlightjs.org/static/demo/
-[lightbox]: http://lokeshdhakar.com/projects/lightbox2/
-[cover]: https://www.flickr.com/photos/79666107@N00/3796678503/in/photolist-6MuYfc-61Rtft-8XzPmY-a6Cozm-54eSMs-6oMJmk-aepZQq-9YkPHp-fiAEGE-dVP4Z5-oxPyJP-atKUFJ-9YHWA5-9YF2f2-9YF2gR-9YHVGN-9YHVvs-qZYYQ6-4JqP2i-a2peGy-9YHVUm-9YHVF7-9YHVCL-9YF3NK-cYteMo-aiPmb9-69dtAi-9YF21x-4aWpmn-7SLiUL-77pqVX-8vXbYv-4HGDSH-a2h5P1-8LsZrQ-9aj1ez-auPZ7q-9YHVMd-9YF2bi-9YF23D-8LpWpn-9an6KL-9YHVZL-dqZ3Cz-2GuvnX-9YHWUo-9YHVWd-p5Roh5-i1zTbv-6sYrUT
-[disqus]: https://disqus.com/
-[ga]: http://www.google.com/analytics/
-[archives]: https://github.com/jekyll/jekyll-archives
-[sitemap]: https://github.com/jekyll/jekyll-sitemap
+Open sourced under the [MIT license](https://github.com/dimitarboeff/gh-pages/LICENSE.md).

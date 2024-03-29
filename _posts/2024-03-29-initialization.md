@@ -2,9 +2,10 @@
 layout: post
 title:  "Initialization"
 date:   29-03-2024 20:20:20
-author: Dimitar Boeff
-categories: General
-tags: first
+author: "Dimitar Boeff"
+tags: [new, sample]
+image: pieta.jpg
+categories: general
 ---
 
 This blog has just been created and this is the first post on it.

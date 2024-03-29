@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/general/2024/03/29/initialization.html</loc>
+<loc>http://localhost:4000/text-formatting</loc>
+<lastmod>2022-03-01T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/learning-resources</loc>
+<lastmod>2023-03-01T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/initialization</loc>
 <lastmod>2024-03-29T20:20:20+01:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/about/</loc>
+<loc>http://localhost:4000/about</loc>
 </url>
 <url>
-<loc>http://localhost:4000/posts/</loc>
+<loc>http://localhost:4000/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/posts</loc>
 </url>
 </urlset>
