@@ -13,4 +13,4 @@ We will have a lot of fun and this will be an adventure.
 
 Thank you for reading!
 
-PS: You can learn more about me in the Resume section.
+PS: You can learn more about me in the About me section.
