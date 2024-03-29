@@ -6,7 +6,7 @@ permalink: /about
 
 <!-- ![alt text]({{ site.baseurl }}/assets/img/logo.png){:.profile} -->
 
-# Summary
+## Summary
 
 A researcher and engineer with extensive experience in additive manufacturing and data science. 
 Strong interest towards aerospace, advanced manufacturing, neuroscience, and philosophy.
