@@ -1,5 +1,6 @@
 # Site Build Settings
 
+
 # jekyll-paginate configuration
 paginate:            5
 
@@ -7,7 +8,7 @@ paginate:            5
 markdown:            kramdown
 highlighter:         rouge
 permalink:           /:title
-plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
+plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag, github-pages]
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
 title:		           "Sic transit gloria mundi"
