@@ -27,22 +27,6 @@ $medium-color: #00AB6C;
 $codepen-color: black;
 $rss-color: #ff6600;
 
-.profile {
-  width: $container-width/6; /* Adjust the width as needed */
-  height: auto; /* This ensures the image's aspect ratio is maintained */
-}
 
-.posts-archive .post {
-  margin-bottom: 20px;
-}
-
-.posts-archive .post h2 {
-  margin-bottom: 5px;
-}
-
-.posts-archive .post .post-meta {
-  font-style: italic;
-  margin-bottom: 10px;
-}
 
 @import "-sections-dir";
