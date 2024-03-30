@@ -18,8 +18,19 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-sitemap", "~> 1.3"
   spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.6"
   spec.add_runtime_dependency "github-pages", "~> 231"
-  spec.add_runtime_dependency "wdm", ">= 0.1.0"
-  spec.add_runtime_dependency 'webrick', '~> 1.7'
-
+  spec.add_runtime_dependency 'bigdecimal', '~> 3.1.7'
+  spec.add_runtime_dependency 'drb', '~> 2.2.1'
+  spec.add_runtime_dependency 'i18n', '~> 1.14.4'
+  spec.add_runtime_dependency 'minitest', '~> 5.22.3'
+  spec.add_runtime_dependency 'activesupport', '~> 7.1.3.2'
+  spec.add_runtime_dependency 'dnsruby', '~> 1.72.0'
+  spec.add_runtime_dependency 'uri', '~> 0.13.0'
+  spec.add_runtime_dependency 'net-http', '~> 0.4.1'
+  spec.add_runtime_dependency 'faraday-net_http', '~> 3.1.0'
+  spec.add_runtime_dependency 'faraday', '~> 2.9.0'
+  spec.add_runtime_dependency 'listen', '~> 3.9.0'
+  spec.add_runtime_dependency 'nokogiri', '~> 1.16.3'
+  spec.add_runtime_dependency 'wdm', '~> 0.1.1', platforms: ['mingw', 'x64_mingw', 'mswin']
+  spec.add_runtime_dependency 'webrick', '~> 1.8.1'
 
 end
