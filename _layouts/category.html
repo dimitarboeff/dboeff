@@ -5,7 +5,7 @@ layout: default
 <div class="posts-archive">
   {% for post in site.posts %}
     <article class="post">
-      <h2><a href="{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a></h2>
+      <h2><a href="{{ site.url }}/{{ post.url }}">{{ post.title }}</a></h2>
       <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
       <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
     </article>
