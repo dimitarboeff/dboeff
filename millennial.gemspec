@@ -30,7 +30,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'faraday', '~> 2.9.0'
   spec.add_runtime_dependency 'listen', '~> 3.9.0'
   spec.add_runtime_dependency 'nokogiri', '~> 1.16.3'
-  spec.add_runtime_dependency 'wdm', '~> 0.1.1', platforms: ['mingw', 'x64_mingw', 'mswin']
+  spec.add_runtime_dependency 'wdm', '~> 0.1.1'
   spec.add_runtime_dependency 'webrick', '~> 1.8.1'
 
 end

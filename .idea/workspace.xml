@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="edbd8099-68f7-4359-b463-cef58ac41ce1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/millennial.gemspec" beforeDir="false" afterPath="$PROJECT_DIR$/millennial.gemspec" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +185,7 @@
       <option name="presentableId" value="Default" />
       <updated>1711748440058</updated>
       <workItem from="1711748441332" duration="4256000" />
-      <workItem from="1711753202988" duration="4638000" />
+      <workItem from="1711753202988" duration="4849000" />
     </task>
     <servers />
   </component>
