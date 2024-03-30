@@ -6,6 +6,7 @@ permalink: /about
 
 ![alt text]({{ site.github.url }}/assets/img/logo.png){:.profile}
 
+
 ## Summary
 
 A researcher and engineer with extensive experience in additive manufacturing and data science. 
